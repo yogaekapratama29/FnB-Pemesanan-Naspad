@@ -103,6 +103,21 @@ while pesan:
                 print('\nPesanan tidak ditemukan.')
                 print('\nTekan Enter untuk melanjutkan.')
                 input()
+        elif pilihan == 5 and pesanan:
+            os.system('clear')
+            print('Checkout Pesanan')
+        
+            daftar_pesanan()
+
+            print()
+            print('Selesaikan pesanan?')
+            print('1. Ya')
+            print('2. Tidak')
+
+            pilihan = int(input('Pilihan: ')) 
+
+            if pilihan == 1:
+                exit()  
 
     except ValueError:
         os.system("clear")
