@@ -64,6 +64,31 @@ while pesan:
 
                 jumlah = abs(int(input('Jumlah: ')))
                 pesanan.append([item, jumlah, harga * jumlah])
+        elif pilihan == 2:
+            os.system('clear')
+
+            print('Pilih minuman:')
+            print('1. Air putih (Gratis)')
+            print('2. Teh Manis (Rp. 5.000,00)')
+            print('3. Jeruk Manis (Rp. 7.000,00)')
+            print('0. Kembali')
+            print()
+
+            pilihan = int(input('Pilih: '))
+
+            if pilihan in range(1, 4):
+                if pilihan == 1:
+                    item = 'Air Putih'
+                    harga = 0
+                elif pilihan == 2:
+                    item = 'Teh Manis'
+                    harga = 5000
+                elif pilihan == 3:
+                    item = 'Jeruk Manis'
+                    harga = 7000
+                
+                jumlah = abs(int(input('Jumlah: ')))
+                pesanan.append([item, jumlah, harga * jumlah])
         elif pilihan == 3:
             os.system('clear')
 
