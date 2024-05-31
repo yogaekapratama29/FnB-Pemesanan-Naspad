@@ -142,7 +142,21 @@ while pesan:
             pilihan = int(input('Pilihan: ')) 
 
             if pilihan == 1:
-                exit()  
+                exit() 
+        elif pilihan == 0:
+            if pesanan:
+                os.system('clear')
+            
+                print('Selesaikan pesanan? Kamu mempunyai barang di keranjang.')
+                print('1. Ya')
+                print('2. Tidak')
+
+                pilihan = int(input('Pilihan: '))
+
+                if pilihan == 1:
+                    exit()
+            else:
+                exit() 
 
     except ValueError:
         os.system("clear")
