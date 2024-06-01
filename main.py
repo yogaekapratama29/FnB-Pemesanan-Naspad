@@ -43,12 +43,15 @@ while pesan:
             print('2. Ayam Bakar (Rp. 10.000,00)')
             print('3. Rendang (Rp. 12.000,00)')
             print('4. Perkedel (Rp. 8.000,00)')
+            print('5. Nasi (Rp. 3.000,00)')
+            print('6. Telor Dadar (Rp. 9.000,00)')
+            print('7. Ayam Gulai (Rp. 11.000,00)')
             print('0. Keluar')
             print()
 
             pilihan = int(input('Pilih: '))
 
-            if pilihan in range(1, 5):
+            if pilihan in range(1, 8):
                 if pilihan == 1:
                     item = 'Ayam Goreng'
                     harga = 10000
@@ -61,6 +64,16 @@ while pesan:
                 elif pilihan == 4:
                     item = 'Perkedel'
                     harga = 8000
+                elif pilihan == 5:
+                    item = 'Nasi'
+                    harga = 3000
+                elif pilihan == 6:
+                    item = 'Telor Dadar'
+                    harga = 9000
+                elif pilihan == 7:
+                    item = 'Ayam Gulai'
+                    harga = 11000
+
 
                 jumlah = abs(int(input('Jumlah: ')))
                 pesanan.append([item, jumlah, harga * jumlah])
