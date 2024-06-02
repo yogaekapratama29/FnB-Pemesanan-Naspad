@@ -118,10 +118,8 @@ while pesan:
             
             daftar_pesanan()
 
-            print()
-            print('0. Kembali')
-
-            print()
+            print('\n0. Kembali\n')
+            
             pilihan = int(input('Pilih pesanan yang mau diubah jumlahnya: ')) - 1
 
             if pilihan in range(len(pesanan)):
@@ -135,7 +133,7 @@ while pesan:
                     
                     pesanan[pilihan][1] = jumlah
                     pesanan[pilihan][2] = harga
-            elif pilihan == 0:
+            elif pilihan == -1:
                 print()
             else:
                 print('\nPesanan tidak ditemukan.')
@@ -143,38 +141,40 @@ while pesan:
                 input()
         elif pilihan == 5 and pesanan:
             os.system('clear')
-            print('Checkout Pesanan')
+
+            print('Checkout Pesanan\n')
         
             daftar_pesanan()
 
-            print()
-            print('Selesaikan pesanan?')
+            print('\nSelesaikan pesanan?')
             print('1. Ya')
             print('2. Tidak')
 
             pilihan = int(input('Pilihan: ')) 
 
             if pilihan == 1:
+                print('\nTerima kasih atas kunjungannya.')
                 exit() 
         elif pilihan == 0:
             if pesanan:
                 os.system('clear')
             
-                print('Selesaikan pesanan? Kamu mempunyai barang di keranjang.')
+                print('Yakin mau keluar? Kamu mempunyai barang di keranjang.')
                 print('1. Ya')
                 print('2. Tidak')
 
                 pilihan = int(input('Pilihan: '))
 
                 if pilihan == 1:
+                    print('\nTerima kasih atas kunjungannya.')
                     exit()
             else:
+                print('\nTerima kasih atas kunjungannya.')
                 exit() 
 
     except ValueError:
         os.system("clear")
 
-        print("Error: Pilihan tidak tersedia")
-        print() # ini untuk spasi
+        print("Error: Pilihan tidak tersedia\n") # \n untuk spasi
         print("Tekan Enter untuk melanjutkan")
         input() # untuk enter
