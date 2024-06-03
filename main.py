@@ -1,6 +1,6 @@
 import os # untuk mengimport package/modul os
 
-pesan = True 
+pesan = True # membuat variabel pesan menjadi true
 pesanan = [] # untuk menyimpan daftar pesanan
 
 def daftar_pesanan():
