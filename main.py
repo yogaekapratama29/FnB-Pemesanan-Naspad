@@ -1,4 +1,5 @@
 import os # untuk mengimport package/modul os
+from tabulate import tabulate # untuk mengimport package/modul os
 
 pesan = True # membuat variabel pesan menjadi true
 pesanan = [] # untuk menyimpan daftar pesanan
@@ -73,10 +74,12 @@ while pesan:
                 elif pilihan == 7:
                     item = 'Ayam Gulai'
                     harga = 11000
-
-
-                jumlah = abs(int(input('Jumlah: ')))
-                pesanan.append([item, jumlah, harga * jumlah])
+                elif pilihan == 0:
+                    print()
+                
+                if pilihan:
+                    jumlah = abs(int(input('Jumlah: ')))
+                    pesanan.append([item, jumlah, harga * jumlah])
         elif pilihan == 2:
             os.system('clear')
 
@@ -99,9 +102,12 @@ while pesan:
                 elif pilihan == 3:
                     item = 'Jeruk Manis'
                     harga = 7000
+                elif pilihan == 0:
+                    print()
                 
-                jumlah = abs(int(input('Jumlah: ')))
-                pesanan.append([item, jumlah, harga * jumlah])
+                if pilihan:
+                    jumlah = abs(int(input('Jumlah: ')))
+                    pesanan.append([item, jumlah, harga * jumlah])
         elif pilihan == 3:
             os.system('clear')
 
