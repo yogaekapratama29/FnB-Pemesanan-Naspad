@@ -1,5 +1,4 @@
 import os # untuk mengimport package/modul os
-from tabulate import tabulate # untuk mengimport package/modul os
 
 pesan = True # membuat variabel pesan menjadi true
 pesanan = [] # untuk menyimpan daftar pesanan
@@ -8,6 +7,13 @@ def daftar_pesanan():
     print('No   Item     Jumlah        Harga')
     for i in range(len(pesanan)):
         print(f'{i + 1}.    {pesanan[i][0]}     {pesanan[i][1]}x        {pesanan[i][2]}')
+
+    total_harga = 0
+
+    for i in range(len(pesanan)):
+        total_harga = total_harga + pesanan[i][2]
+
+    print('\nTotal harga:', total_harga)
 
 while pesan:
     try: # konsep nya sama try and catch untuk mencegah error
@@ -160,7 +166,13 @@ while pesan:
 
             pilihan = int(input('Pilih: '))
 
-            if pilihan in range(1, 3):
+            if pilihan == 1:
+                print('\nTerima kasih atas kunjungannya.')
+                exit()
+            elif pilihan == 2:
+                print('\nMenampilkan Barcode QRIS.')
+                print('\nTekan Enter untuk melanjutkan.')
+                input()
                 print('\nTerima kasih atas kunjungannya.')
                 exit()
         elif pilihan == 0:
