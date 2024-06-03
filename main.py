@@ -146,15 +146,17 @@ while pesan:
         
             daftar_pesanan()
 
-            print('\nSelesaikan pesanan?')
-            print('1. Ya')
-            print('2. Tidak')
+            print('\nMetode pembayaran:')
+            print('1. Cash')
+            print('2. Non Cash')
+            print('0. Kembali')
+            print()
 
-            pilihan = int(input('Pilihan: ')) 
+            pilihan = int(input('Pilih: '))
 
-            if pilihan == 1:
+            if pilihan in range(1, 3):
                 print('\nTerima kasih atas kunjungannya.')
-                exit() 
+                exit()
         elif pilihan == 0:
             if pesanan:
                 os.system('clear')
@@ -163,7 +165,7 @@ while pesan:
                 print('1. Ya')
                 print('2. Tidak')
 
-                pilihan = int(input('Pilihan: '))
+                pilihan = int(input('Pilih: '))
 
                 if pilihan == 1:
                     print('\nTerima kasih atas kunjungannya.')
