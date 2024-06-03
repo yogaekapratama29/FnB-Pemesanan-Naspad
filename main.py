@@ -1,4 +1,7 @@
 import os # untuk mengimport package/modul os
+import qrcode
+import numpy as np
+
 
 pesan = True # membuat variabel pesan menjadi true
 pesanan = [] # untuk menyimpan daftar pesanan
@@ -160,7 +163,7 @@ while pesan:
 
             print('\nMetode pembayaran:')
             print('1. Cash')
-            print('2. Non Cash')
+            print('2. Non Cash(Dana)'),
             print('0. Kembali')
             print()
 
@@ -170,7 +173,49 @@ while pesan:
                 print('\nTerima kasih atas kunjungannya.')
                 exit()
             elif pilihan == 2:
-                print('\nMenampilkan Barcode QRIS.')
+                print("\n")
+                # Link yang akan dijadikan barcode
+                link = "https://qr.dana.id/v1/281012012023033112307249"
+
+                # Buat QR code dengan ukuran yang lebih kecil
+                qr = qrcode.QRCode(
+                    version=1,
+                    error_correction=qrcode.constants.ERROR_CORRECT_L,
+                    box_size=1,
+                    border=1,
+                )
+                qr.add_data(link)
+                qr.make(fit=True)
+
+                # Buat gambar QR code
+                img = qr.make_image(fill_color="black", back_color="white")
+
+                # Konversi gambar ke numpy array
+                img_array = np.array(img)
+
+                # Konversi ke bentuk ASCII
+                ascii_art = []
+                for i in range(0, len(img_array), 2):
+                    upper_row = img_array[i]
+                    lower_row = img_array[i + 1] if i + 1 < len(img_array) else np.zeros_like(upper_row)
+                    ascii_row = ""
+                    for upper_pixel, lower_pixel in zip(upper_row, lower_row):
+                        if upper_pixel and lower_pixel:
+                            ascii_row += "█"  # Full block
+                        elif upper_pixel and not lower_pixel:
+                            ascii_row += "▀"  # Upper half block
+                        elif not upper_pixel and lower_pixel:
+                            ascii_row += "▄"  # Lower half block
+                        else:
+                            ascii_row += " "  # Space
+                    ascii_art.append(ascii_row)
+
+                # Gabungkan baris-baris ASCII
+                ascii_art_str = "\n".join(ascii_art)
+
+                # Cetak QR code di terminal
+                print(ascii_art_str)
+
                 print('\nTekan Enter untuk melanjutkan.')
                 input()
                 print('\nTerima kasih atas kunjungannya.')
