@@ -1,4 +1,4 @@
-import os # untuk mengimport package os
+import os # untuk mengimport package/modul os
 
 pesan = True 
 pesanan = [] # untuk menyimpan daftar pesanan
@@ -34,7 +34,7 @@ while pesan:
             print()
 
         pilihan = int(input("Pilih : "))
-
+#
         if pilihan == 1:
             os.system('clear')
 
