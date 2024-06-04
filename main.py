@@ -1,6 +1,7 @@
 import os # untuk mengimport package/modul os
-import qrcode
-import numpy as np
+import qrcode #untuk menampilkan qrcode
+import numpy as np #untuk menghitung ascii
+
 
 
 pesan = True # membuat variabel pesan menjadi true
@@ -218,6 +219,8 @@ while pesan:
 
                 print('\nTekan Enter untuk melanjutkan.')
                 input()
+
+                os.system("clear")
                 print('\nTerima kasih atas kunjungannya.')
                 exit()
         elif pilihan == 0:
