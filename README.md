@@ -27,7 +27,12 @@ py main.py
 
 ## Contributing
 
-This project contribute by [Yoga Eka Pratama](https://github.com/yogaekapratama29), [M. Faris](https://github.com/muhamadfarissss), [Muhammad Mahrus Ali](https://github.com/Alialkhozini), [Nizar Daffa Maulana](https://github.com/izardaffa), and [Raihan Sastra Wibyanto](https://github.com/Davidcatch)!
+This project contribute by:
+- [Yoga Eka Pratama](https://github.com/yogaekapratama29)
+- [M. Faris](https://github.com/muhamadfarissss)
+- [Muhammad Mahrus Ali](https://github.com/Alialkhozini)
+- [Nizar Daffa Maulana](https://github.com/izardaffa)
+- [Raihan Sastra Wibyanto](https://github.com/Davidcatch)
 
 <!-- Want to contributing?
 
