@@ -1,8 +1,4 @@
-# Project Name
-
-FnB-Pemesanan-Naspad
-
-## Project Description
+# Welcome to FnB-Pemesanan-Naspad !
 
 Aplikasi Pemesanan Nasi Padang berbasis CLI menggunakan Python untuk Tugas Akhir mata kuliah Praktikum Pemrograman 1.
 
