@@ -89,7 +89,9 @@ while pesan:
                 
                 if pilihan:
                     jumlah = abs(int(input('Jumlah: ')))
-                    pesanan.append([item, jumlah, harga * jumlah])
+
+                    if jumlah > 0:
+                        pesanan.append([item, jumlah, harga * jumlah])
         elif pilihan == 2:
             os.system('clear')
 
@@ -117,7 +119,9 @@ while pesan:
                 
                 if pilihan:
                     jumlah = abs(int(input('Jumlah: ')))
-                    pesanan.append([item, jumlah, harga * jumlah])
+
+                    if jumlah > 0:
+                        pesanan.append([item, jumlah, harga * jumlah])
         elif pilihan == 3:
             os.system('clear')
 
