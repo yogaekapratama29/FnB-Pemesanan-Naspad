@@ -44,7 +44,7 @@ while pesan:
             print("0.Keluar")
             print()
 
-        pilihan = int(input("Pilih : "))
+        pilihan = int(input("Pilih (berupa angka): "))
 #
         if pilihan == 1:
             os.system('clear')
@@ -60,7 +60,7 @@ while pesan:
             print('0. Keluar')
             print()
 
-            pilihan = int(input('Pilih: '))
+            pilihan = int(input('Pilih (berupa angka): '))
 
             if pilihan in range(1, 8):
                 if pilihan == 1:
@@ -102,7 +102,7 @@ while pesan:
             print('0. Kembali')
             print()
 
-            pilihan = int(input('Pilih: '))
+            pilihan = int(input('Pilih (berupa angka): '))
 
             if pilihan in range(1, 4):
                 if pilihan == 1:
@@ -172,7 +172,7 @@ while pesan:
             print('0. Kembali')
             print()
 
-            pilihan = int(input('Pilih: '))
+            pilihan = int(input('Pilih (berupa angka): '))
 
             if pilihan == 1:
                 print('\nTerima kasih atas kunjungannya.')
@@ -235,7 +235,7 @@ while pesan:
                 print('1. Ya')
                 print('2. Tidak')
 
-                pilihan = int(input('Pilih: '))
+                pilihan = int(input('Pilih (berupa angka): '))
 
                 if pilihan == 1:
                     print('\nTerima kasih atas kunjungannya.')
